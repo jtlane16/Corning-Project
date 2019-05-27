@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BladeDataSet" targetNamespace="http://tempuri.org/BladeDataSet.xsd" xmlns:mstns="http://tempuri.org/BladeDataSet.xsd" xmlns="http://tempuri.org/BladeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SawsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SawsConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SawsConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_BladesTableAdapter" GeneratorDataComponentClassName="v_BladesTableAdapter" Name="v_Blades" UserDataComponentName="v_BladesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SawsConnectionString (Web.config)" DbObjectName="Saws.dbo.v_Blades" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SerialNumber, ManufactureName, StatusDesc, BladeDiameter, BladeGrit, BladeThickness FROM dbo.v_Blades</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SerialNumber" DataSetColumn="SerialNumber" />
+              <Mapping SourceColumn="ManufactureName" DataSetColumn="ManufactureName" />
+              <Mapping SourceColumn="StatusDesc" DataSetColumn="StatusDesc" />
+              <Mapping SourceColumn="BladeDiameter" DataSetColumn="BladeDiameter" />
+              <Mapping SourceColumn="BladeGrit" DataSetColumn="BladeGrit" />
+              <Mapping SourceColumn="BladeThickness" DataSetColumn="BladeThickness" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BladeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BladeDataSet" msprop:Generator_UserDSName="BladeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_Blades" msprop:Generator_TableClassName="v_BladesDataTable" msprop:Generator_TableVarName="tablev_Blades" msprop:Generator_TablePropName="v_Blades" msprop:Generator_RowDeletingName="v_BladesRowDeleting" msprop:Generator_RowChangingName="v_BladesRowChanging" msprop:Generator_RowEvHandlerName="v_BladesRowChangeEventHandler" msprop:Generator_RowDeletedName="v_BladesRowDeleted" msprop:Generator_UserTableName="v_Blades" msprop:Generator_RowChangedName="v_BladesRowChanged" msprop:Generator_RowEvArgName="v_BladesRowChangeEvent" msprop:Generator_RowClassName="v_BladesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SerialNumber" msprop:Generator_ColumnVarNameInTable="columnSerialNumber" msprop:Generator_ColumnPropNameInRow="SerialNumber" msprop:Generator_ColumnPropNameInTable="SerialNumberColumn" msprop:Generator_UserColumnName="SerialNumber" type="xs:int" />
+              <xs:element name="ManufactureName" msprop:Generator_ColumnVarNameInTable="columnManufactureName" msprop:Generator_ColumnPropNameInRow="ManufactureName" msprop:Generator_ColumnPropNameInTable="ManufactureNameColumn" msprop:Generator_UserColumnName="ManufactureName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusDesc" msprop:Generator_ColumnVarNameInTable="columnStatusDesc" msprop:Generator_ColumnPropNameInRow="StatusDesc" msprop:Generator_ColumnPropNameInTable="StatusDescColumn" msprop:Generator_UserColumnName="StatusDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BladeDiameter" msprop:Generator_ColumnVarNameInTable="columnBladeDiameter" msprop:Generator_ColumnPropNameInRow="BladeDiameter" msprop:Generator_ColumnPropNameInTable="BladeDiameterColumn" msprop:Generator_UserColumnName="BladeDiameter" type="xs:int" minOccurs="0" />
+              <xs:element name="BladeGrit" msprop:Generator_ColumnVarNameInTable="columnBladeGrit" msprop:Generator_ColumnPropNameInRow="BladeGrit" msprop:Generator_ColumnPropNameInTable="BladeGritColumn" msprop:Generator_UserColumnName="BladeGrit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BladeThickness" msprop:Generator_ColumnVarNameInTable="columnBladeThickness" msprop:Generator_ColumnPropNameInRow="BladeThickness" msprop:Generator_ColumnPropNameInTable="BladeThicknessColumn" msprop:Generator_UserColumnName="BladeThickness" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_Blades" />
+      <xs:field xpath="mstns:SerialNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
